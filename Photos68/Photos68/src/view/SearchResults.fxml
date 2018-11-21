@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" minHeight="0.0" minWidth="0.0" prefHeight="389.0" prefWidth="587.0">
+         <children>
+            <AnchorPane layoutX="309.0" layoutY="-3.0" prefHeight="335.0" prefWidth="266.0">
+               <children>
+                  <Label layoutX="25.0" layoutY="48.0" prefHeight="56.0" prefWidth="232.0" text="Create an album for the result">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="89.0" layoutY="116.0" text="Album name">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="newAlbumName" layoutX="50.0" layoutY="155.0" />
+                  <Button fx:id="OKButton" layoutX="108.0" layoutY="233.0" mnemonicParsing="false" onAction="#OKButtonClicked" text="OK" />
+                  <Label fx:id="addFail" layoutX="62.0" layoutY="188.0" text="DUPLICATE. TRY AGAIN" textFill="#ee0606" visible="false" />
+                  <Label fx:id="addSuccess" layoutX="86.0" layoutY="188.0" text="ADD SUCCESS" textFill="#37da24" visible="false" />
+                  <Label fx:id="mustInputText" layoutX="86.0" layoutY="188.0" text="MUST INPUT TEXT" textFill="#ee0606" visible="false" />
+               </children>
+            </AnchorPane>
+            <ScrollPane fx:id="scrollPane" prefHeight="335.0" prefWidth="310.0">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TilePane fx:id="tilePane" prefHeight="335.0" prefWidth="310.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+            <Separator layoutX="304.0" layoutY="334.0" prefHeight="3.0" prefWidth="220.0" />
+            <Label layoutX="98.0" layoutY="353.0" text="Search Results">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
