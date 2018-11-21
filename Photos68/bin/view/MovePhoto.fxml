@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="416.0" prefWidth="269.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.MoveControl">
+   <children>
+      <ScrollPane prefHeight="362.0" prefWidth="268.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ListView fx:id="albumListView" layoutY="37.0" prefHeight="323.0" prefWidth="268.0" />
+                  <Label layoutX="24.0" layoutY="14.0" text="Move Photo to Selected Album">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <Button fx:id="OKButton" layoutX="109.0" layoutY="371.0" mnemonicParsing="false" onAction="#chooseMove" prefHeight="25.0" prefWidth="52.0" text="OK">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets></Button>
+      <Button fx:id="cancelButton" layoutX="189.0" layoutY="371.0" mnemonicParsing="false" onAction="#returnToAlbum" text="Cancel" />
+      <CheckBox fx:id="copyCheck" layoutX="22.0" layoutY="375.0" mnemonicParsing="false" text="Copy?" />
+   </children>
+</AnchorPane>
